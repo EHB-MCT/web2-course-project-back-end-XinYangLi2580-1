@@ -1,6 +1,6 @@
 import "dotenv/config";
 import mongoose from "mongoose";
-import Planet from "../models/planet.js"; // change if your model path differs
+import Planet from "../src/models/planet.js"; // change if your model path differs
 
 const EXO_API_BASE =
   process.env.EXO_API_BASE || "https://exoplanetarchive.ipac.caltech.edu/TAP/sync";
