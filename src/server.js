@@ -1,4 +1,6 @@
-import 'dotenv/config'
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
@@ -6,6 +8,10 @@ import mongoose from 'mongoose'
 import authRoutes from './routes/auth.js'
 import bookingRoutes from './routes/bookings.js'
 import planetsRoutes from './routes/planets.js'
+
+if (!process.env.JWT_SECRET) {
+  console.error("❌ JWT_SECRET is missing. Check your backend .env (same folder as server.js/package.json).");
+}
 
 const app = express()
 
