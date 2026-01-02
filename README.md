@@ -126,6 +126,6 @@ https://www.mongodb.com/docs/atlas/getting-started/
 
 # ✨ Author
 
-Made by Yanis Li
-Course: Web 2
+Made by Yanis Li,
+Course: Web 2,
 Academic year: 2025–2026
