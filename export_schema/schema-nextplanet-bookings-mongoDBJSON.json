@@ -1,0 +1,59 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "__v",
+      "createdAt",
+      "extras",
+      "planetKey",
+      "planetName",
+      "seatType",
+      "totalPriceEUR",
+      "travelDate",
+      "updatedAt",
+      "userId"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "__v": {
+        "bsonType": "int"
+      },
+      "createdAt": {
+        "bsonType": "date"
+      },
+      "extras": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string"
+        }
+      },
+      "planetKey": {
+        "bsonType": "string"
+      },
+      "planetName": {
+        "bsonType": "string"
+      },
+      "seatType": {
+        "bsonType": "string"
+      },
+      "totalPriceEUR": {
+        "bsonType": [
+          "double",
+          "int"
+        ]
+      },
+      "travelDate": {
+        "bsonType": "string"
+      },
+      "updatedAt": {
+        "bsonType": "date"
+      },
+      "userId": {
+        "bsonType": "objectId"
+      }
+    }
+  }
+}

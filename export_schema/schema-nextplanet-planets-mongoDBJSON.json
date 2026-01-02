@@ -1,0 +1,78 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "__v",
+      "createdAt",
+      "distanceMkm",
+      "key",
+      "massE24",
+      "name",
+      "radiusKm",
+      "source",
+      "updatedAt"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "__v": {
+        "bsonType": "int"
+      },
+      "createdAt": {
+        "bsonType": "date"
+      },
+      "discoveryYear": {
+        "bsonType": "int"
+      },
+      "distanceLy": {
+        "bsonType": "double"
+      },
+      "distanceMkm": {
+        "bsonType": [
+          "double",
+          "int"
+        ]
+      },
+      "distancePc": {
+        "bsonType": [
+          "double",
+          "int"
+        ]
+      },
+      "hostStar": {
+        "bsonType": "string"
+      },
+      "key": {
+        "bsonType": "string"
+      },
+      "massE24": {
+        "bsonType": [
+          "double",
+          "null",
+          "int"
+        ]
+      },
+      "name": {
+        "bsonType": "string"
+      },
+      "radiusKm": {
+        "bsonType": [
+          "int",
+          "null",
+          "double"
+        ]
+      },
+      "source": {
+        "bsonType": "string"
+      },
+      "type": {
+        "bsonType": "string"
+      },
+      "updatedAt": {
+        "bsonType": "date"
+      }
+    }
+  }
+}
