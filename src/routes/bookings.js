@@ -4,28 +4,27 @@ import { requireAuth } from '../middleware/authtoken.js'
 
 const router = express.Router()
 
-// ✅ GET /api/bookings/me  (what your frontend expects)
+// GET /api/bookings/me
 router.get('/me', requireAuth, async (req, res) => {
   try {
-    const bookings = await Booking.find({ userId: req.user.userId }).sort({ createdAt: -1 })
+    const bookings = await Booking.find({ userId: req.user.id }).sort({ createdAt: -1 })
     res.json({ ok: true, bookings })
   } catch (err) {
     res.status(500).json({ ok: false, message: 'Could not load bookings' })
   }
 })
 
-// ✅ Keep old behavior: GET /api/bookings
+// GET /api/bookings
 router.get('/', requireAuth, async (req, res) => {
   try {
-    const bookings = await Booking.find({ userId: req.user.userId }).sort({ createdAt: -1 })
-    // keep old response shape (array) so nothing else breaks
+    const bookings = await Booking.find({ userId: req.user.id }).sort({ createdAt: -1 })
     res.json(bookings)
   } catch (err) {
     res.status(500).json({ ok: false, message: 'Could not load bookings' })
   }
 })
 
-// ✅ POST /api/bookings
+// POST /api/bookings
 router.post('/', requireAuth, async (req, res) => {
   try {
     const { planetKey, planetName, travelDate, seatType, extras = [], totalPriceEUR } = req.body
@@ -35,7 +34,7 @@ router.post('/', requireAuth, async (req, res) => {
     }
 
     const created = await Booking.create({
-      userId: req.user.userId,
+      userId: req.user.id, // ✅ FIX HERE
       planetKey,
       planetName,
       travelDate,

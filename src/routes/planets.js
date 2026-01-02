@@ -34,6 +34,18 @@ router.get("/recommended", async (req, res) => {
   }
 });
 
+// GET single planet by key
+router.get('/:key', async (req, res) => {
+  try {
+    const planet = await Planet.findOne({ key: req.params.key })
+    if (!planet) return res.status(404).json({ ok:false, message:'Planet not found' })
+    res.json(planet)
+  } catch (e) {
+    res.status(500).json({ ok:false, message: e.message })
+  }
+})
+
+
 /**
  * GET /api/planets/search
  * Search + filters + sort (for your Search page)
