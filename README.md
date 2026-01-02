@@ -30,9 +30,13 @@ npm run dev
 # 🚀 .env
 
 PORT=3000
+
 MONGODB_URI=mongodb+srv://user1:E91v9eRgrMLZyIzz@cluster0.enp6v.mongodb.net/nextplanet?retryWrites=true&w=majority
+
 SOLAR_API_TOKEN=204a7a4b-3648-4b79-a736-68fe96cdd8ce
+
 EXO_API_BASE=https://exoplanetarchive.ipac.caltech.edu/TAP/sync
+
 JWT_SECRET=thisislong
 
 ---
