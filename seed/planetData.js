@@ -313,4 +313,4 @@ const planetData = [
   }
 ];
 
-export default planetData;
+module.exports = planetData

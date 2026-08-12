@@ -5,7 +5,15 @@ const planetSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  system: {
+    type: String,
+    required: true,
+  },
   type: {
+    type: String,
+    required: true,
+  },
+  category: {
     type: String,
     required: true,
   },
@@ -27,6 +35,14 @@ const planetSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+  featured: {
+    type: Boolean,
+    default: false,
   },
 })
 
