@@ -18,6 +18,12 @@ app.get('/api', (request, response) => {
   response.json({ message: 'NextPlanet API is running' })
 })
 
+app.get('/api/secret', (request, response) => {
+  response.json({
+    message: 'Houston, we have a website.',
+  })
+})
+
 connectDatabase()
 
 app.listen(port, () => {
