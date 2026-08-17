@@ -1,6 +1,6 @@
 const planetData = [
   {
-    name: "Mercury",
+    name: "Mercurious",
     system: "Solar System",
     type: "Rocky",
     category: "Solar System",
@@ -13,7 +13,7 @@ const planetData = [
     featured: false
   },
   {
-    name: "Venus",
+    name: "VeAnus",
     system: "Solar System",
     type: "Rocky",
     category: "Solar System",
@@ -26,7 +26,7 @@ const planetData = [
     featured: true
   },
   {
-    name: "Earth",
+    name: "Urath",
     system: "Solar System",
     type: "Rocky",
     category: "Solar System",
@@ -52,7 +52,7 @@ const planetData = [
     featured: true
   },
   {
-    name: "Jupiter",
+    name: "Jupiler",
     system: "Solar System",
     type: "Gas Giant",
     category: "Solar System",
@@ -78,7 +78,7 @@ const planetData = [
     featured: true
   },
   {
-    name: "Uranus",
+    name: "UrAnus",
     system: "Solar System",
     type: "Ice Giant",
     category: "Solar System",
