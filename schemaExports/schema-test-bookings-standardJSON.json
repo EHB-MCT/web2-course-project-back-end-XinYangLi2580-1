@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "_id",
+    "__v",
+    "createdAt",
+    "departureDate",
+    "extras",
+    "planetId",
+    "totalPrice",
+    "travelClass",
+    "travellers"
+  ],
+  "properties": {
+    "_id": {
+      "$ref": "#/$defs/ObjectId"
+    },
+    "__v": {
+      "type": "integer"
+    },
+    "createdAt": {
+      "$ref": "#/$defs/Date"
+    },
+    "departureDate": {
+      "$ref": "#/$defs/Date"
+    },
+    "extras": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "planetId": {
+      "$ref": "#/$defs/ObjectId"
+    },
+    "totalPrice": {
+      "type": "integer"
+    },
+    "travelClass": {
+      "type": "string"
+    },
+    "travellers": {
+      "type": "integer"
+    }
+  },
+  "$defs": {
+    "ObjectId": {
+      "type": "object",
+      "properties": {
+        "$oid": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{24}$"
+        }
+      },
+      "required": [
+        "$oid"
+      ],
+      "additionalProperties": false
+    },
+    "Date": {
+      "type": "object",
+      "properties": {
+        "$date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "$date"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
